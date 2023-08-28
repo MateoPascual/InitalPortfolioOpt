@@ -38,4 +38,9 @@ plt.title(title)
 plt.xlabel('Date', fontsize = 18)
 plt.xlabel('Adj. Price USD ($)', fontsize = 18)
 plt.legend(my_stocks.columns.values, loc = 'upper left')
-plt.show()
+#plt.show()
+
+# daily symbol return and annualized covariance 
+
+returns = df.pct_change()
+co_matrix_annual = returns.cov() * 252

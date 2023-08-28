@@ -26,6 +26,8 @@ for stock in assets:
     df[stock] = web.get_data_yahoo(stock,  start = SSD, end = today)['Adj Close']
 
 #visualize the stock
+#change the vizulaization to candle stick for open and close on each date
+
 title = 'Protfolio Adj Close Price History'
 my_stocks = df
 

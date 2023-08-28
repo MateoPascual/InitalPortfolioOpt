@@ -44,3 +44,6 @@ plt.legend(my_stocks.columns.values, loc = 'upper left')
 
 returns = df.pct_change()
 co_matrix_annual = returns.cov() * 252
+
+port_variance = np.dot(weight.T, np.dot(co_matrix_annual, weight))
+print(port_variance)

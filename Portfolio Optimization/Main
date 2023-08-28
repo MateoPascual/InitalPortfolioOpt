@@ -52,4 +52,13 @@ port_volatility = np.sqrt(port_variance)
 #Annual Portfolio Return 
 
 portfolioSimpleAnnualReturn = np.sum(returns.mean()*weight)*252
-print(portfolioSimpleAnnualReturn)
+
+#expected annual Return, Volitility, Variance
+
+percent_var = str(round(port_variance,2)*100)+'%'
+percent_volitility = str(round(port_volatility,2)*100)+'%'
+percent_return = str(round(portfolioSimpleAnnualReturn,2)*100)+'%'
+
+print('Expected Annual Return:'+percent_return)
+print('Expected Volitility:'+percent_volitility)
+print('Expected Variance:'+percent_var)
